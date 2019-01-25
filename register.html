@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Booking Registration Form test</h1>
+
+    <form action="" method="bouncer.php">
+        <label>Name: </label><input type="text" id="txtName" class="input-box"><div id="txtNameDesc" class="descToCntrl">Name goes here</div><br>
+        <label>Address: </label><input type="text" id="txtAddress" class="input-box"><br>
+        <label>City: </label><input type="text" id="city" class="input-box"><br>
+        <label>Province: </label><input type="text" id="province" class="input-box"><br>
+        <label>Postal Code: </label><input type="text" id="postalCode" class="input-box"><br>
+        <label>Phone Number: </label><input type="text" id="PhoneNumber" class="input-box"><br>
+        <br>
+        <br>
+        <br>
+        Which continent are you traveling to?<br>
+        <input type="radio" name="continent" value="NA"> North America<br>
+        <input type="radio" name="continent" value="SA"> South America<br>
+        <input type="radio" name="continent" value="Eur"> Europe<br>
+        <input type="radio" name="continent" value="Africa"> Africa<br>
+        <input type="radio" name="continent" value="Asia"> Asia<br>
+        <input type="radio" name="continent" value="Aus"> Australia<br>
+        <input type="radio" name="continent" value="AA"> Antarctica<br>
+        <br>
+
+        What excursions are you wishing to book?<br>
+        <input type="checkbox" name="horse" value="Horse"> Horseback Riding<br>
+        <input type="checkbox" name="scuba" value="Scuba"> Scuba Diving<br>
+        <input type="checkbox" name="pyramid" value="Pyramid"> View the Pyramids<br>
+        <input type="checkbox" name="bridge" value="Bridge"> Bridge Tournament<br>
+        <br>
+
+        When can we call you?
+        <select name="call">
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+        </select><br>
+        <br>
+
+        <label for="essay">Who else will be traveling with you?</label> <textarea name="essay" id="essay"></textarea><br>
+        <br>
+
+        <input type="button" value="Click Me"><br>
+        <!--keep in for now, probably will delete-->
+        <br>
+
+        <input type="submit" id="lindaSubmit"> <br>
+        <!--defaults to submit on the name of the button-->
+        <br>
+
+        <input type="reset" id="lindaReset"> <br>
+        <!--resets the form-->
+
+    </form>
+    <div id="lindaTable">Testing</div>
+    oops
+</body>
+
+<script src="script.js"></script>
+
+</html>
