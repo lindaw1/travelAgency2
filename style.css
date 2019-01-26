@@ -76,4 +76,6 @@ input {
 .descToCntrl{
     display: none;
     background-color: orange;
+    position: absolute;
+    left: 400px;
 }

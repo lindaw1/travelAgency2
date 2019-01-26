@@ -1,12 +1,28 @@
 console.log("hello");
 
-var tbName = document.getElementById("txtName");
+var txtInput = ['txtName', 'txtAddress', 'txtCity', 'txtProvince', 'txtPostalCode', 'txtPhone'];
+var txtDesc = ['txtNameDesc', 'txtAddressDesc', 'txtCityDesc', 'txtProvinceDesc', 
+    'txtPostalCodeDesc', 'txtPhoneDesc'];
+
+//for (var i = 0; i < txtInput.length; i++) {
+var tbName = document.getElementById("txtName");  //'txtInput[i]
 tbName.addEventListener("focus",function(event){
-    var divToShow = document.getElementById("txtNameDesc");
+    var divToShow = document.getElementById("txtNameDesc"); //"txtDesc[i]"
     divToShow.style.display="block";
 });
 tbName.addEventListener("blur",function(event){
-    var divToShow = document.getElementById("txtNameDesc");
+    var divToShow = document.getElementById("txtNameDesc"); //"txtDesc[i]"
+    divToShow.style.display="none";
+});
+//}
+
+var tbAddress = document.getElementById("txtAddress");
+tbAddress.addEventListener("focus",function(event){
+    var divToShow = document.getElementById("txtAddressDesc");
+    divToShow.style.display="block";
+});
+tbAddress.addEventListener("blur",function(event){
+    var divToShow = document.getElementById("txtAddressDesc");
     divToShow.style.display="none";
 });
 
