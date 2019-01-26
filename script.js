@@ -1,56 +1,34 @@
 console.log("hello");
 
-var txtInput = ['txtName', 'txtAddress', 'txtCity', 'txtProvince', 'txtPostalCode', 'txtPhone'];
-var txtDesc = ['txtNameDesc', 'txtAddressDesc', 'txtCityDesc', 'txtProvinceDesc', 
-    'txtPostalCodeDesc', 'txtPhoneDesc'];
 
-//for (var i = 0; i < txtInput.length; i++) {
-var tbName = document.getElementById("txtName");  //'txtInput[i]
-tbName.addEventListener("focus",function(event){
-    var divToShow = document.getElementById("txtNameDesc"); //"txtDesc[i]"
-    divToShow.style.display="block";
-});
-tbName.addEventListener("blur",function(event){
-    var divToShow = document.getElementById("txtNameDesc"); //"txtDesc[i]"
-    divToShow.style.display="none";
-});
-//}
 
-var tbAddress = document.getElementById("txtAddress");
-tbAddress.addEventListener("focus",function(event){
-    var divToShow = document.getElementById("txtAddressDesc");
-    divToShow.style.display="block";
-});
-tbAddress.addEventListener("blur",function(event){
-    var divToShow = document.getElementById("txtAddressDesc");
-    divToShow.style.display="none";
-});
+// // Asks the user if they are sure that they want to submit the form.
+// var submitButton = document.getElementById("lindaSubmit");
 
-// Asks the user if they are sure that they want to submit the form.
-var submitButton = document.getElementById("lindaSubmit");
+// submitButton.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     var submitNow = confirm("Are you sure you want to submit this form?");
+//     if (submitNow === true) {
+//         console.log("submit is true");
+//         //I need code here to actually submit the form
+//     } else {
+//         alert("Have a nice day.  Maybe you will submit another day.");
+//     }
+// });
 
-submitButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    var submitNow = confirm("Are you sure you want to submit this form?");
-    if (submitNow === true) {
-        console.log("submit is true");
-    } else {
-        alert("Have a nice day.  Maybe you will submit another day.");
-    }
-});
+// // Asks the user if they are sure they want to reset the data on the form.
+// var resetButton = document.getElementById("lindaReset");
 
-// Asks the user if they are sure they want to reset the data on the form.
-var resetButton = document.getElementById("lindaReset");
-
-resetButton.addEventListener("click", function (event) {
-    event.preventDefault();
-    var submitNow = confirm("Are you sure you want to reset the information on the form?");
-    if (submitNow === true) {
-        console.log("reset is true");
-    } else {
-        alert("Reset is cancelled");
-    }
-});
+// resetButton.addEventListener("click", function (event) {
+//     event.preventDefault();
+//     var submitNow = confirm("Are you sure you want to reset the information on the form?");
+//     if (submitNow === true) {
+//         console.log("reset is true");
+//         // I need code here to actually reset the form.
+//     } else {
+//         alert("Reset is cancelled");
+//     }
+// });
 
 // Assignment Day 6 - Create a table with images and descriptions using JavaScript:::
 
@@ -103,13 +81,13 @@ for (var i = 0; i < imageArray.length; i++) {
     var td1 = document.createElement('td');
     var image = document.createElement('img');
     image.src = imageArray[i];
-    image.height="300";
+    image.height = "300";
     td1.appendChild(image);
     tr.appendChild(td1);
 
-// 4. Create a data tag for column2
-// 5. Insert text from descArray
-// 6. Add the data for column2
+    // 4. Create a data tag for column2
+    // 5. Insert text from descArray
+    // 6. Add the data for column2
     var td2 = document.createElement('td');
     var paragraph = document.createElement('p');
     var paragraphText = document.createTextNode(descArray[i]);
@@ -117,10 +95,39 @@ for (var i = 0; i < imageArray.length; i++) {
     td2.appendChild(paragraph);
     tr.appendChild(td2);
 
-// 7. steps 1-6 are added to the table after each iteration in the imageArray.
+    // 7. steps 1-6 are added to the table after each iteration in the imageArray.
     table.appendChild(tr);
 }
 
 // new table is added to the ID called lindaTable
 document.getElementById("lindaTable").appendChild(table);
 
+// Day 7 Assignment
+// 1. focus and blur input boxes with descpriton for form contents
+// I would like to to this with a loop and array.  But I can't get it to work
+
+var txtInput = ['txtName', 'txtAddress', 'txtCity', 'txtProvince', 'txtPostalCode', 'txtPhone'];
+var txtDesc = ['txtNameDesc', 'txtAddressDesc', 'txtCityDesc', 'txtProvinceDesc',
+    'txtPostalCodeDesc', 'txtPhoneDesc'];
+
+//for (var i = 0; i < txtInput.length; i++) {
+    var tbName = document.getElementById("txtName");  //  'txtInput[i]'
+    tbName.addEventListener("focus", function (event) {
+        var divToShow = document.getElementById("txtNameDesc"); // "txtDesc[i]"
+        divToShow.style.display = "block";
+    });
+    tbName.addEventListener("blur", function (event) {
+        var divToShow = document.getElementById("txtNameDesc"); // "txtDesc[i]"
+        divToShow.style.display = "none";
+    });
+//}
+
+var tbAddress = document.getElementById("txtAddress");
+tbAddress.addEventListener("focus", function (event) {
+    var divToShow = document.getElementById("txtAddressDesc");
+    divToShow.style.display = "block";
+});
+tbAddress.addEventListener("blur", function (event) {
+    var divToShow = document.getElementById("txtAddressDesc");
+    divToShow.style.display = "none";
+});
