@@ -45,9 +45,10 @@ form {
     background-repeat: no-repeat;
     background-size: 150%;
 }
-/* Makes all pages responsive */
+/* Makes pages responsive */
 body {
     max-width: 100%;
+    margin-left: 10px;
 }
 
 /* Elements with the id="button" are sized smaller. */
@@ -73,6 +74,7 @@ input {
   float: left;
 }
 
+/* Orange box for form */
 .descToCntrl{
     display: none;
     background-color: orange;

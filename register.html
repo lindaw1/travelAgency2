@@ -11,10 +11,11 @@
 </head>
 
 <body>
+<!-- Form for Booking request for more information from travel agent. -->
+    <h1>Booking Registration Form</h1>
 
-    <h1>Booking Registration Form test</h1>
-
-    <form action="" method="bouncer.php">
+    <form action="" method="bouncer.php" id="myForm">
+        <!-- Input Boxes, required for submission -->
         <label>Name: </label><input type="text" id="txtName" class="input-box" required>
         <div id="txtNameDesc" class="descToCntrl">Name goes here</div><br>
 
@@ -27,8 +28,9 @@
         <label>Province: </label><input type="text" id="txtProvince" class="input-box" required>
         <div id="txtProvinceDesc" class="descToCntrl">Province goes here</div><br>
 
-        <label>Postal Code: </label><input type="text" id="txtPostalCode" class="input-box" 
-        required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="X1X 1X1">
+        <!-- Special pattern required for Postal Code -->
+        <label>Postal Code: </label><input type="text" id="txtPostalCode" class="input-box" required pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+            placeholder="X1X 1X1">
         <div id="txtPostalCodeDesc" class="descToCntrl">Postal Code goes here. X1X 1X1</div><br><br>
 
         <label>Phone: </label><input type="text" id="txtPhone" class="input-box" required>
@@ -79,7 +81,9 @@
 
 
     </form>
-    <div id="lindaTable"></div>
+
+    <!-- Image and Description Table created in JavaScript - Day 6 Assignment -->
+    <div id="lindaTable"></div> 
 
 </body>
 
